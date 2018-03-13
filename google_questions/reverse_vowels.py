@@ -64,6 +64,8 @@ class Solution:
         print(vowels)
         return re.sub('(?i)[aeiou]', lambda m: vowels.pop(), s)        
 
+
 sol = Solution()
-str = "Slap-dab set-up, Mistress Ann asserts, imputes bad pals."
-print(sol.lambda_reverse_vowels(str))
+str = "hello"
+#str = "Slap-dab set-up, Mistress Ann asserts, imputes bad pals."
+print(sol.test_reverse_vowels(str))
