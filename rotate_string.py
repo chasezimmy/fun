@@ -13,4 +13,12 @@ class Solution:
             
         return False
 
-        
+
+class Solution:
+    def rotateString(self, A, B):
+        """
+        :type A: str
+        :type B: str
+        :rtype: bool
+        """
+        return B in A + A
