@@ -1,5 +1,4 @@
 # Fibonnaci
-import timeit
 
 class Solution:
 	# Dynamic Programming
@@ -37,25 +36,4 @@ s = Solution()
 memo = {}
 fib = {}
 
-start1 = timeit.default_timer()
 print "1:", s.fib(1000)
-stop1 = timeit.default_timer()
-
-start2 = timeit.default_timer()
-#print "2:", s.fib_rec(40)
-stop2 = timeit.default_timer()
-
-start3 = timeit.default_timer()
-#print "3:", s.fib_memo(40)
-stop3 = timeit.default_timer()
-
-start4 = timeit.default_timer()
-#print "4:", s.fib_bottom_up(1000000)
-stop4 = timeit.default_timer()
-
-print "\n"
-print "Dynamic - My Attempt:", stop1 - start1
-#print "Recursion:", stop2 - start2
-#print "MIT Memoization:", stop3 - start3
-#print "MIT Bottom-Up:", stop4 - start4
-#print memo
