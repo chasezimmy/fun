@@ -17,4 +17,4 @@ class Solution:
 
 sol = Solution()
 string = 'Sore was I ere I saw Eros'
-print sol.isPalindrome2(string.lower())
+print(sol.isPalindrome2(string.lower()))
