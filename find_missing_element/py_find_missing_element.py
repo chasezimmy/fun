@@ -23,7 +23,6 @@ class Solution:
 	def findMissingElement(self, arr1, arr2):
 		return sum(arr1) - sum(arr2)
 
-
 sol = Solution()
 a1 = [4, 1, 0, 2, 9, 6, 8, 7, 5, 3]
 a2 = [6, 4, 7, 2, 1, 0, 8, 3, 9]
