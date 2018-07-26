@@ -26,4 +26,4 @@ class Solution:
 
 s = Solution()
 arr = [3, 5, 6, 8, 9, 9, 10, 12, 18, 20]
-print s.heap_sort(arr)
+print(s.heap_sort(arr))
