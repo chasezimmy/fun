@@ -13,5 +13,5 @@ class Solution:
 		return "NONE"
 
 s = Solution()
-string = "AABBC"
-print ''.join(s.first_non_rep(string))
+string = "AABBCDD"
+print(''.join(s.first_non_rep(string)))

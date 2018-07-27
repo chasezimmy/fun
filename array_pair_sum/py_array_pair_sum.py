@@ -47,14 +47,14 @@ class Solution:
 			if target not in seen:
 				seen.add(n)
 			else:
-				output.add((min(n, target), max(n, target)))
+				output.add((n, target))
 
 		return output
 
 
 s = Solution()
 arr = [1, 1, 2, 3, 4]
-sum_ = 5
-print s.pair_sum2(arr, sum_)
+k = 5
+print(s.pair_sum2(arr, k))
 
 

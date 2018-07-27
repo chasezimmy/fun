@@ -7,16 +7,14 @@ class Solution:
 		for i in arr:
 			if arr.count(i) % 2 == 0:
 				return True, i
-				break
 		return False
 
 	# Hashmap: O(n)
 	def hashmap(self, arr):
-		count = 1
 		hashmap = {}
 		for i in arr:
 			if i not in hashmap:
-				hashmap[i] = count
+				hashmap[i] = 1
 			else:
 				hashmap[i] += 1
 		for n, i in hashmap.items():
@@ -30,6 +28,6 @@ class Solution:
  
 s = Solution()
 arr = [1, 2, 3, 4,2,3]
-print s.naive(arr)
-print s.hashmap(arr)
-print s.xor(arr)
+print(s.naive(arr))
+print(s.hashmap(arr))
+print(s.xor(arr))
