@@ -8,30 +8,20 @@ For example, given [(1, 3), (5, 8), (4, 10), (20, 25)], you should return [(1, 3
 
 class Solution:
 	def merge_intervals(self, arr):
-		
-		if arr is None:
-			return
+		result = []
+		for start, end in sorted(arr, key=lambda x: x[0]):
+			if result and start <= result[-1][1]:
+				prev_start, prev_end = result[-1]
+				result[-1] = (prev_start, max(end, prev_end))
+			else:
+				result.append((start, end))
 
-		behind = arr[0]
-		interval = [[False, False], [False, False]]
-		merge = arr
+			print(result)
 
-		for n in range(len(arr)):
-			if (n+1) >= len(arr):
-				continue
+		return result
 
-			for i in range(len(arr[n])):
-				for j in range(len(arr[n+1])):
-					if arr[n][i] > arr[n+1][j]:
-						interval[i][j] = True
-
-			if True in interval[0] or True in interval[1]:
-				merge.pop(n)
-				
-			interval = [[False, False], [False, False]]
-
-		return merge
 
 sol = Solution()
 arr = [(1, 3), (5, 8), (4, 10), (20, 25)]
+arr = [(1,3), (2,4), (5,7), (6,8)]
 print(sol.merge_intervals(arr))
